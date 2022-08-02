@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#222 35%, #111 65%, #000);
+  color: #ddd;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.8rem;
+  font-size: 1.5em;
+  font-family: "Play", sans-serif;
+}
+
+h2 {
+  color: rgb(120, 197, 255);
+}
+
+h3 {
+  color: deeppink;
+  font-style: italic;
+}
+
+a {
+  color: rgb(20, 157, 255);
+  font-size: 0.8em;
+}
+a:visited {
+  color: rgb(20, 157, 255);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  width: 100vw;
+  /* background-color: #da5; */
+  background-color: #000;
+  border-bottom: 2px solid deeppink;
+  padding-top: 0.5em;
+}
+
+nav a {
+  font-size: 1.3em;
+  color: deeppink;
+  margin: 5px 30px 5px 30px;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: deeppink;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.content {
+  height: 100%;
+  padding: 0 3vw 0 3vw;
+}
+
+.index-content {
+  max-width: 80vw;
+  margin: auto;
+  /* text-justify: distribute; */
+}
+
+#section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* grid-template-columns: 1fr 1fr; */
+  max-width: 50vw;
+  margin: auto;
+}
+
+#section1 img {
+  width: 240px;
+}
+
+#faves-list {
+  width: 240px;
+}
+
+@media screen and (max-width: 600px) {
+  #section1 {
+    flex-direction: column;
+  }
+}
+
+/* bio page */
+#interests-table {
+  min-width: 400px;
+  margin: auto;
+  margin-top: 5em;
+}
+
+#interests-table td {
+  border: 1px solid #aaa;
+  max-width: 20vw;
+  padding: 10px;
+  font-family: monospace;
+}
+
+#interests-table td:first-child {
+  font-size: 1.3em;
+  vertical-align: top;
+}
+#interests-table th {
+  padding-bottom: 0.6em;
+  color: #aca;
+}
