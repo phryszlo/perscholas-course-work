@@ -44,19 +44,17 @@ nav {
   background-color: #000;
   border-bottom: 2px solid deeppink;
   padding: 0.5em 0em 0.2em 0em;
+  margin: 0;
 }
-
 nav a {
   font-size: 1.3em;
   color: deeppink;
   margin: 5px 30px 5px 30px;
   text-decoration: none;
 }
-
 nav a:visited {
   color: deeppink;
 }
-
 nav a:hover {
   color: #fff;
 }
@@ -69,21 +67,21 @@ nav a:hover {
 .index-content {
   max-width: 60vw;
   margin: auto;
-  /* text-justify: distribute; */
 }
 .index-content p {
   text-align: justify;
 }
+/* #intro-paragraph {
+  text-align: justify;
+} */
 
 #me-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* grid-template-columns: 1fr 1fr; */
   max-width: 50vw;
   margin: auto;
 }
-
 #me-section img {
   width: 240px;
   border-radius: 50%;
@@ -143,22 +141,20 @@ nav a:hover {
 }
 
 #interests-table {
-  min-width: 400px;
+  max-width: 80%;
   margin: auto;
   margin-top: 2em;
 }
-
 #interests-table th {
   padding-bottom: 0.6em;
   color: #aca;
   text-align: left;
-  font-size: .8em;
+  font-size: 0.8em;
   padding-left: 20px;
 }
 #interests-table td {
   border: 1px solid #ccc4;
   padding: 20px;
-  max-width: 20vw;
   font-family: monospace;
   vertical-align: top;
 }
@@ -166,15 +162,15 @@ nav a:hover {
   max-width: 7em;
   font-size: 1.3em;
   vertical-align: top;
+  max-width: 20vw;
 }
 #interests-table td:nth-child(2) {
   text-align: justify;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 #interests-table td:nth-child(3) {
   text-align: center;
 }
-
 
 @media screen and (max-width: 1012px) {
   #me-section {
