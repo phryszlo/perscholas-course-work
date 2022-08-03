@@ -41,7 +41,6 @@ nav {
   justify-content: center;
   height: 2.5rem;
   width: 100vw;
-  /* background-color: #da5; */
   background-color: #000;
   border-bottom: 2px solid deeppink;
   padding: 0.5em 0em 0.2em 0em;
@@ -62,7 +61,7 @@ nav a:hover {
 
 .content {
   height: 100%;
-  padding: 0 3vw 0 3vw;
+  padding: 0 0 0 3vw;
 }
 
 .index-content {
@@ -72,26 +71,34 @@ nav a:hover {
 .index-content p {
   text-align: justify;
 }
-/* #intro-paragraph {
-  text-align: justify;
-} */
 
 #me-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 50vw;
+  width: 100%;
+  max-width: 60vw;
   margin: auto;
 }
 #me-section img {
-  width: 240px;
+  position: relative;
+  left: -20px;
+  width: 200px;
   border-radius: 50%;
   box-shadow: 5px 5px 5px 5px, -5px -5px 5px 5px;
 }
 #me-section img:hover {
-  width: 240px;
+  width: 200px;
   border-radius: 50%;
   box-shadow: 7px -5px 5px 5px, -7px 5px 5px 5px;
+}
+#me-section p {
+  font-size: 0.7em;
+}
+#me-blurb-div {
+  max-width: 30%;
+  position: relative;
+  left: -20px;
 }
 
 .spacer {
@@ -100,9 +107,10 @@ nav a:hover {
 }
 
 #faves-list-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 240px;
-  margin: auto;
-  /* margin-left: 30px; */
 }
 
 #faves-list-div h4 {
@@ -113,35 +121,94 @@ nav a:hover {
   margin-left: -10px;
   margin-bottom: 0;
   text-align: justify;
+  vertical-align: top;
 }
 
 #faves-list-div ul {
   list-style: upper-roman;
   width: 20vw;
+  vertical-align: top;
 }
 
 #faves-list-div li {
   font-family: monospace;
 }
 
-/* #faves-list-div li:before {
+#faves-list-div li::before {
   color: red;
-} */
-
-#lorem-section p {
-  font-family: monospace;
-  text-align: justify;
 }
 
+#the-form {
+  max-width: 60%;
+}
+.form-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-field label {
+  flex: none;
+  display: block;
+  margin-right: 10px;;
+  width: 150px;
+  font-size: 1em;
+}
+
+.form-field input {
+  flex: 1 1 auto;
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  padding: 4px;
+  margin-top: -4px;
+}
+
+.form-field textarea {
+  flex: 1 1 auto;
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  padding: 4px;
+  margin-top: -4px;
+}
+
+#form-radio-div label {
+  font-size: .8em;
+}
+#suggestions-text {
+  display: none;
+}
+#suggestions-text label {
+  font-size: .8em;
+  padding-bottom: .5em;
+  width: 100%;
+}
+#btnSubmit {
+  display: block;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.radio-field {
+  display: flex;
+}
+.radio {
+  width: 30px;
+}
+.radio-field label {
+  color: deeppink;
+}
 /* bio page */
+
 
 .bio-content .intro-section {
   text-align: center;
-  max-width: 50vw;
+  max-width: 60vw;
   margin: auto;
   font-size: smaller;
 }
-
 
 #interests-section {
   width: 100%;
@@ -150,7 +217,8 @@ nav a:hover {
 
 #interests-table {
   min-width: 800px;
-  max-width: 80%;
+  /* max-width: 80%; */
+  max-width: 70vw;
   margin: auto;
   margin-top: 2em;
 }
@@ -169,23 +237,36 @@ nav a:hover {
 }
 #interests-table td:first-child {
   --minFontSize: 0.8em;
-  --maxFontSize: 1.3em;
-  --scaler: 2vw;
-  font-size: 1.3em;
+  --maxFontSize: 1.2em;
+  --scaler: 4vw;
+  /* font-size: 1.3em; fallback if clamp fails */
   font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
   vertical-align: top;
-  max-width: 20vw;
+  width: 22%;
+  max-width: 24vw;
 }
 #interests-table td:nth-child(2) {
   text-align: justify;
-  font-size: 0.8em;
+  font-size: 0.9em;
   width: 50%;
 }
 #interests-table td:nth-child(3) {
   text-align: center;
 }
 
-@media screen and (max-width: 1012px) {
+#pets-cell {
+  display: flex;
+}
+#pets-cell img {
+  width: 46%;
+  padding: 5px;
+  border: 2px inset #999;
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    max-width: fit-content;
+  }
   #me-section {
     flex-direction: column;
   }
@@ -211,7 +292,6 @@ nav a:hover {
   #lorem-section {
     width: 70vw;
   }
-
 
   #interests-table {
     max-width: 95%;

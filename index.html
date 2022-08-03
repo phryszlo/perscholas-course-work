@@ -7,6 +7,28 @@
     <style></style>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <title>Daren Porter</title>
+
+    <script>
+      //add click listeners to the radio buttons
+      window.addEventListener('DOMContentLoaded', (event) => {
+        var elem = document.getElementsByName("suggestions");
+        var txt = document.getElementById('suggestions-text');
+        for (var i = 0; i < elem.length; i++){
+          console.log(elem[i]);
+          elem[i].addEventListener('click', (e) => {
+            console.log("sajhdkfsd", e.target.value);
+            if (e.target.value === 'yes'){
+              txt.style.display = 'block';
+            }
+            else{
+              txt.style.display = 'none';
+            }
+          });
+        }
+      })
+
+    </script>
+
   </head>
   <body>
     <nav class="main-nav">
@@ -25,31 +47,76 @@
         </p>
       </section>
       <section id="me-section">
-        <a href="./pages/about.html">
-          <img src="./images/me.jpg" />
-        </a>
-        <div class="spacer"></div>
+        <div id="me-image-div">
+          <a href="https://github.com/phryszlo" target="_blank">
+            <img src="./images/me.jpg" />
+          </a>
+        </div>
+        <!-- <div id="me-blurb-div">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae
+            iure velit minus adipisci. Eveniet explicabo dolore similique porro
+            tenetur dolores quos ad illum doloremque voluptatem, eum eius
+            voluptatibus a.
+          </p>
+        </div> -->
+        <!-- <div class="spacer"></div> -->
         <div id="faves-list-div">
           <h4>Favorite things I'm eating right now:</h4>
           <ul>
-            <li>Home-grilled fajita tacos</li>
+            <li>Home-grilled fajitas</li>
             <li>Hard-boiled eggs</li>
             <li>Angel-food cake</li>
           </ul>
         </div>
       </section>
       <hr />
-      <section id="lorem-section">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+      <section id="form-section">
+        <h4>Sign-up and Suggestions 📢</h4>
+        <form id="the-form">
+          <div id="form-fields">
+            <div class="form-field">
+              <label for="txtFirst">First name:</label>
+              <input type="text" id="txtFirst" />
+            </div>
+            <div class="form-field">
+              <label for="txtLast">Last name:</label>
+              <input type="text" id="txtLast" />
+            </div>
+            <div class="form-field">
+              <label for="txtEmail">Email:</label>
+              <input type="email" id="txtEmail" />
+            </div>
+          </div>
+          <br />
+          <div id="form-radio-div" class="form-field">
+            <label>Do you have any suggestions for this site?</label>
+            <div class="form-field radio-field">
+              <input type="radio" class="radio" name="suggestions" id="rdoYes" value="yes" />
+              <label for="rdoYes">Yes</label>
+            </div>
+            <div class="form-field radio-field">
+              <input type="radio" class="radio" name="suggestions" id="rdoNo" value="no" checked />
+              <label for="rdoNo">No</label>
+            </div>
+
+            <br />
+          </div>
+          <br />
+
+          <div id="suggestions-text" class="form-field">
+              <label for="txtSuggestions">Suggestions:</label>
+              <textarea rows="4" cols="50" id="txtSuggestions" name="txtSuggestions"></textarea>
+            </div>
+          </div>
+        </div>
+          <br />
+        <div>
+          <button id="btnSubmit">Submit</button>
+        </div>
+        </form>
       </section>
+      <footer>test</footer>
     </div>
   </body>
 </html>
